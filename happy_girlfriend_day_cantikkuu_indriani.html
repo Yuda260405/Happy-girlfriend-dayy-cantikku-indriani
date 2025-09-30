@@ -85,10 +85,9 @@
     let w = window.innerWidth, h = window.innerHeight;
     canvas.width = w; canvas.height = h;
 
-    // Daftar foto Indriani (ganti dengan path gambar di repo kamu)
+    // Path gambar utama
     const photoUrls = [
-        'assets/indriani1.jpg',
-        'assets/indriani2.jpg',
+        'Indriani.jpg'
     ];
 
     // Preload images
@@ -101,7 +100,7 @@
         images.push(img);
     });
 
-    // Kotak-kotak galaksi berisi foto Indriani
+    // Kotak-kotak galaksi berisi gambar
     let boxes = [];
     for (let i = 0; i < 50; i++) {
         let angle = Math.random() * Math.PI * 2;
@@ -128,7 +127,7 @@
             ctx.fill();
         }
         ctx.globalAlpha = 1;
-        // Kotak-kotak foto
+        // Kotak-kotak gambar
         boxes.forEach(box => {
             ctx.save();
             ctx.globalAlpha = box.alpha;
